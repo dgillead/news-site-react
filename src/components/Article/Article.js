@@ -7,7 +7,7 @@ class Article extends Component {
         <h1>{this.props.title}</h1>
         <p>{this.props.created_date}</p>
         <h2>{this.props.byline}</h2>
-        <img src={this.props.image} />
+        <img src={this.props.image} alt="current article"/>
         <p>{this.props.abstract}</p>
       </div>
     )

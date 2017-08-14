@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import { Button } from 'react-bootstrap';
 
 class Nav extends Component {
   render() {
     return (
       <nav>
         { this.props.navItems.map((item) => {
-          return <a key={item.label} href="#" onClick={ () => this.props.handleNavClick(item.value) }>{' '}{item.label}</a>
+          return <Button key={item.label}><a href="#" onClick={ () => this.props.handleNavClick(item.value) }>{' '}{item.label}</a></Button>
         }) }
       </nav>
     )
