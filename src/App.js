@@ -4,6 +4,7 @@ import './App.css';
 import Nav from './components/Nav/Nav.js';
 import ArticleTeaser from './components/ArticleTeaser/ArticleTeaser.js'
 import Article from './components/Article/Article.js'
+import { Navbar, Jumbotron, Button } from 'react-bootstrap';
 
 class App extends Component {
   constructor(props) {
@@ -63,7 +64,7 @@ class App extends Component {
         <Nav navItems={this.state.navItems} handleNavClick={(clickedItem) => console.log(clickedItem)} />
         <h1>ArticleTeaser Component</h1>
         <hr />
-        <ArticleTeaser 
+        <ArticleTeaser
           id={this.state.article.id}
           title={this.state.article.title}
           createdDate={this.state.article.createdDate}
