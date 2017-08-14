@@ -62,11 +62,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Nav Component</h1>
-        <hr />
         <BrowserRouter>
           <div>
+            <h1>Nav Component</h1>
             <Nav navItems={this.state.navItems} handleNavClick={(clickedItem) => console.log(clickedItem)} />
+            <hr />
             <Route exact path="/" component={HomePage} />
             <Route exact path="/articles/:articleID" component={ArticlePage} />
           </div>
