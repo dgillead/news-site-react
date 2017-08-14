@@ -5,6 +5,9 @@ import Nav from './components/Nav/Nav.js';
 import ArticleTeaser from './components/ArticleTeaser/ArticleTeaser.js'
 import Article from './components/Article/Article.js'
 import { Navbar, Jumbotron, Button } from 'react-bootstrap';
+import { BrowserRouter, Route } from 'react-router-dom'
+import HomePage from './pages/HomePage';
+import ArticlePage from './pages/ArticlePage';
 
 class App extends Component {
   constructor(props) {
@@ -61,17 +64,13 @@ class App extends Component {
       <div>
         <h1>Nav Component</h1>
         <hr />
-        <Nav navItems={this.state.navItems} handleNavClick={(clickedItem) => console.log(clickedItem)} />
-        <h1>ArticleTeaser Component</h1>
-        <hr />
-        <ArticleTeaser
-          id={this.state.article.id}
-          title={this.state.article.title}
-          createdDate={this.state.article.createdDate}
-          handleTitleClick={(articleID) => console.log(articleID)} />
-        <h1>Article Component</h1>
-        <hr />
-        <Article {...this.state.article} />
+        <BrowserRouter>
+          <div>
+            <Nav navItems={this.state.navItems} handleNavClick={(clickedItem) => console.log(clickedItem)} />
+            <Route exact path="/" component={HomePage} />
+            <Route exact path="/articles/:articleID" component={ArticlePage} />
+          </div>
+        </BrowserRouter>
       </div>
     );
   }
