@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import News from './data/news.json';
 import './App.css';
 import Nav from './components/Nav/Nav.js';
-import { Navbar, Jumbotron, Button } from 'react-bootstrap';
+import { Navbar } from 'react-bootstrap';
 import { BrowserRouter, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage';
 import ArticlePage from './pages/ArticlePage';
@@ -62,7 +62,7 @@ class App extends Component {
       <div>
         <BrowserRouter>
           <div>
-            <Navbar>
+            <Navbar className="text-center">
               <Nav navItems={this.state.navItems} handleNavClick={(clickedItem) => console.log(clickedItem)} />
             </Navbar>
             <hr />

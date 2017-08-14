@@ -26,3 +26,11 @@
 nav {
   margin: 10px;
 }
+
+.jumbo-content {
+  margin-left: 20px;
+}
+
+#articles {
+  width: 80%;
+}
