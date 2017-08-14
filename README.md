@@ -1,4 +1,4 @@
-# Overview Test
+# Overview
 
 In this challenge, we will focus on creating three components that we will later use as we create a news site similar to reddit.com.
 
